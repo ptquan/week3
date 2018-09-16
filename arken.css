@@ -1,0 +1,118 @@
+
+
+*{
+    margin:0px;
+    padding:0px;   
+}
+.tieude {
+    display: flex;
+    justify-content:center;
+}
+.logo {
+    color: red;
+    line-height: 20px;
+    text-shadow: 10px;
+    font-size: 40px;
+    line-height: 30px;
+    font-weight: bold;
+    font-family:'Courier New', Courier, monospace;
+    text-shadow: 1px rgb(100, 36, 36); 
+    display: block;
+    margin: 0,5px;
+    padding: 20px;
+    flex-grow: 1;
+    position: relative;
+    top: 20px; 
+    animation:runlogo 5s infinite;
+}
+@keyframes runlogo {
+    0%   {left:0px;}
+    100%  {left:200px;
+    color: rgb(216, 118, 27);
+}
+}
+.timeopen {
+    line-height: 10px;
+    text-shadow: 10px;
+    font-size: 15pxx;
+    font-weight: bold;
+    font-family:'Courier New', Courier, monospace;
+    position: relative;
+    top: 50px;
+    right: 40px;
+}
+.languge ul{
+    list-style-type: none;
+}
+.languge ul li{
+    display: inline;
+}
+.flag {
+    list-style-type: none;
+    width: 15%;
+    margin: 0,5px;
+    padding: 10px;
+    position: relative;
+    top: 20px;
+}
+/**menu**/
+.menu ul {  
+    width: 80%;;
+    padding: 0px;
+    margin: 20px;
+    list-style-type: none;
+    
+}
+.menu ul li {
+    width:auto;
+    height:20px;
+    line-height: 20px;
+    position: relative; 
+    display: inline-block;
+    padding:10px; 
+    margin: 5px;
+  }
+  .menu ul li a{
+    text-decoration: none;
+    display: block;
+    color: black;
+  }
+/**sub-menu**/
+
+.menu .sub-menu {
+    position: absolute;
+    left: -25px ;
+    top: 1px;
+    display:none ;
+    li
+  }
+ .menu ul li:hover .sub-menu{
+     display: block;
+ }
+
+
+  .menu ul li:hover {
+    background: rgb(212, 205, 205);
+  }
+
+
+/** slides**/
+#slider img {
+    width: 50%;
+    height: 30vw;
+    border: 1px solid ;
+    display: block;
+    position: relative;
+    left: 150px;
+    top: 10px;
+    float: left;
+}
+.aside {
+    float: left;
+    border: 2px solid red;
+    width: 20%;
+    height: 30vw;
+    position: relative;
+    top: 10px;
+    left: 400px;
+} 
