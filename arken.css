@@ -2,7 +2,7 @@
 
 *{
     margin:0px;
-    padding:0px;   
+    padding:0px;
 }
 .tieude {
     display: flex;
@@ -16,13 +16,13 @@
     line-height: 30px;
     font-weight: bold;
     font-family:'Courier New', Courier, monospace;
-    text-shadow: 1px rgb(100, 36, 36); 
+    text-shadow: 1px rgb(100, 36, 36);
     display: block;
     margin: 0,5px;
     padding: 20px;
     flex-grow: 1;
     position: relative;
-    top: 20px; 
+    top: 20px;
     animation:runlogo 5s infinite;
 }
 @keyframes runlogo {
@@ -56,20 +56,20 @@
     top: 20px;
 }
 /**menu**/
-.menu ul {  
+.menu ul {
     width: 80%;;
     padding: 0px;
     margin: 20px;
     list-style-type: none;
-    
+
 }
 .menu ul li {
     width:auto;
     height:20px;
     line-height: 20px;
-    position: relative; 
+    position: relative;
     display: inline-block;
-    padding:10px; 
+    padding:10px;
     margin: 5px;
   }
   .menu ul li a{
@@ -97,22 +97,69 @@
 
 
 /** slides**/
+#slider, .aside {
+  /* Remember we need to add this to take into account the border when we set the widths */
+  box-sizing: border-box;
+}
+#slider {
+  float: left;
+  width: 80%;
+  position: relative;
+  height: 100%;
+}
+
 #slider img {
-    width: 50%;
-    height: 30vw;
+    width: 500px;
+    height: auto;
     border: 1px solid ;
     display: block;
-    position: relative;
-    left: 150px;
-    top: 10px;
+    /* position: absolute; */
+    left: 0;
+    /* left: 150px; */
+    /* top: 10px; */
     float: left;
 }
+
 .aside {
     float: left;
     border: 2px solid red;
     width: 20%;
     height: 30vw;
     position: relative;
-    top: 10px;
-    left: 400px;
-} 
+    /* We no longer need to position it like this */
+    /* top: 10px; */
+    /* left: 400px; */
+}
+
+.slides {
+  overflow: hidden;
+  height: 100%;
+  width: 500px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slide {
+  width: calc(100% * 4); /* the slider times the number of images*/
+  position: relative;
+  display: flex;
+  height: 100%;
+  animation: slider 10s linear infinite;
+}
+
+/*  We move the location of the "active" slide to the left */
+/*  so it works as a window, that is moving towards the left */
+
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: -100%;
+  }
+
+  100% {
+    left: -200%;
+  }
+}
